@@ -1,0 +1,395 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+/* --- RESETEO Y BASE --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  /* Fondo gris oscuro consistente */
+  background-color: #333333;
+  color: white; /* Texto blanco */
+}
+
+/* --- TIPOGRAFÍA --- */
+h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 2rem;
+}
+h2 { /* Estilo para nombres de integrantes */
+  font-size: 3.5rem; /* Ajustado */
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  color: #9370DB; /* Morado claro para nombres */
+}
+h3 { /* Estilo para títulos de sección */
+    font-size: 4.5rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    color: #6A0DAD; /* Morado principal */
+    text-align: center;
+}
+
+p {
+  font-size: 1.8rem; /* Ligeramente más pequeño para las descripciones */
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* --- HEADER Y NAVEGACIÓN (Tema Morado) --- */
+header {
+  margin-top: 0px;
+  position: fixed;
+  padding-top: 2px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 9%;
+  backdrop-filter: blur(10px);
+  filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.3)); /* Sombra más sutil */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  background-color: rgba(51, 51, 51, 0.7); /* Fondo semi-transparente */
+}
+
+.logo {
+  font-size: 3rem;
+  color: #9370DB; /* Morado claro */
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+nav a {
+  font-size: 1.8rem;
+  color: #9370DB; /* Morado claro */
+  margin-left: 4rem;
+  font-weight: 500;
+  transition: 0.5s ease;
+  border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+  color: #BDA0E8; /* Morado más claro al pasar el mouse */
+  border-bottom: 3px solid #BDA0E8;
+}
+
+/* --- RESPONSIVE MENU (Morado Theme) --- */
+@media (max-width: 995px) {
+  nav {
+    position: absolute;
+    display: none;
+    top: 100%;
+    right: 0;
+    width: auto;
+    min-width: 200px;
+    border-left: 3px solid #6A0DAD;
+    border-bottom: 3px solid #6A0DAD;
+    border-bottom-left-radius: 2rem;
+    border-top: none;
+    padding: 2rem;
+    background-color: rgba(51, 51, 51, 0.9);
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  nav a {
+    display: block;
+    font-size: 2rem;
+    margin: 1.5rem 0;
+    color: #BDA0E8; /* Morado claro */
+    text-align: right;
+  }
+
+  nav a:hover,
+  nav a.active {
+    padding: 0;
+    border-radius: 0;
+    border-bottom: 3px solid #BDA0E8;
+    background-color: transparent;
+    transform: none;
+  }
+}
+
+/* --- GENERAL SECTION STYLES --- */
+section {
+  min-height: 100vh;
+  padding: 12rem 9% 5rem;
+}
+
+/* --- HOME SECTION --- */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+  background-color: #333333;
+  flex-wrap: wrap;
+}
+
+.home .home-content h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* General Span (Morado) */
+span, .contacto-span {
+  color: #6A0DAD; /* Morado Principal */
+}
+
+.home-content h3 { /* Typing text */
+  font-size: 34px;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  min-width: 280px;
+}
+
+.home-content p {
+  font-size: 2rem;
+}
+
+/* Home Image (Morado Border) */
+
+/* --- BOTONES (Tema Morado) --- */
+.btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background-color: #6A0DAD; /* Morado */
+  border-radius: 4rem;
+  font-size: 1.6rem;
+  color: white; /* Texto blanco */
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+  border: 2px solid #4B0082; /* Indigo */
+  transition: 0.3s ease;
+  cursor: pointer;
+  margin: 3rem 1.5rem 3rem 0;
+  text-align: center;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background-color: #9370DB; /* Medium Purple */
+  color: black;
+  box-shadow: 0 0 25px #9370DB; /* Sombra morada clara */
+}
+
+/* --- TYPING TEXT ANIMATION (Morado Theme) --- */
+.typing-text span {
+  position: relative;
+}
+
+.typing-text span::before {
+  content: "Equipo"; /* Initial content */
+  color: #6A0DAD; /* Morado */
+  animation: words 10s infinite;
+}
+
+.typing-text span::after {
+  content: "";
+  background-color: #333333; /* Section background */
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  border-left: 3px solid #6A0DAD; /* Morado border */
+  right: -8px;
+  animation: cursor 0.6s infinite, typing 10s steps(14, end) infinite;
+}
+
+@keyframes cursor {
+  0%, 100% { border-left-color: #6A0DAD; }
+  50% { border-left-color: transparent; }
+}
+
+/* Palabras para Equipo/Contacto */
+@keyframes words {
+  0%, 20% { content: "Estudiantes"; }
+  21%, 40% { content: "Activistas"; }
+  41%, 60% { content: "Colaboradores"; }
+  61%, 80% { content: "Soñadores"; }
+  81%, 100% { content: "Agentes de Cambio"; }
+}
+
+@keyframes typing {
+  0%, 20%, 100% { width: 0; }
+  10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% { width: calc(100% + 8px); }
+}
+
+/* --- ANIMATED BORDERS (Purple Theme) --- */
+.image-border {
+  position: relative;
+  width: 250px; /* Tamaño más pequeño para fotos de equipo */
+  height: 250px; /* Hacerlo cuadrado */
+  max-width: 80%; /* Máximo ancho */
+  border-radius: 50%; /* Hacerlo circular */
+  overflow: hidden;
+  padding: 6px;
+  margin: 1rem auto 2rem auto; /* Centrar y añadir espacio */
+}
+
+.image-border::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -500px; right: -500px; bottom: 0; /* Ajustado */
+  /* Purple Gradient */
+  background: linear-gradient(120deg, #4B0082, #6A0DAD, #9370DB, #BDA0E8, #9370DB, #6A0DAD, #4B0082);
+  background-size: 200%;
+  z-index: 1;
+  border-radius: inherit; /* Hereda el 50% */
+  animation: BGgradient 15s ease infinite;
+}
+
+.image-border img {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 100%; /* Asegura que la imagen llene el círculo */
+  object-fit: cover; /* Recorta la imagen para que encaje */
+  border-radius: 50%; /* Redondeo interior */
+}
+
+@keyframes BGgradient {
+  0% { background-position: 0% 200%; }
+  50% { background-position: 200% 0%; }
+  100% { background-position: 0% 330%; }
+}
+
+/* --- TEAM SECTION STYLES --- */
+.equipo { /* Main team section */
+    /* background-color: #444; */ /* Optional different background */
+    padding-top: 5rem;
+}
+
+.equipo-titulo { /* Title for the team section */
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.miembros-grid { /* Grid container for team members */
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */ /* Auto responsive columns */
+    grid-template-columns: repeat(2, 1fr); /* Start with 2 columns */
+    gap: 4rem; /* Space between cards */
+    margin-top: 4rem;
+}
+
+.miembro-card { /* Individual team member card */
+    background-color: #444; /* Slightly lighter background */
+    padding: 3rem;
+    border-radius: 15px;
+    text-align: center; /* Center content within card */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.miembro-card:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+}
+
+.miembro-content h2 { /* Member name */
+    margin-top: 1.5rem;
+}
+
+.miembro-content p { /* Member quote */
+    font-size: 1.6rem; /* Smaller text for quote */
+    font-style: italic;
+    color: #ccc; /* Lighter text color */
+}
+
+.social-icons {
+    margin-top: 2rem;
+}
+
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: transparent;
+  border: 0.2rem solid #6A0DAD; /* Purple border */
+  font-size: 2rem;
+  border-radius: 50%;
+  margin: 0 1rem; /* Adjusted margin */
+  transition: 0.3s ease;
+  color: #9370DB; /* Lighter purple */
+}
+
+.social-icons a:hover {
+  color: #333; /* Dark text */
+  transform: scale(1.2); /* Slightly larger scale */
+  background-color: #BDA0E8; /* Lightest purple background */
+  box-shadow: 0 0 15px #BDA0E8; /* Light purple glow */
+  border-color: #BDA0E8;
+}
+
+/* Media Query for Team Grid Columns */
+@media (max-width: 768px) {
+    .miembros-grid {
+        grid-template-columns: 1fr; /* Stack cards on smaller screens */
+    }
+}
+
+
+/* --- DONATION SUMMARY SECTION STYLES --- */
+.apoyo-resumen {
+    background-color: #444;
+    padding: 4rem 9%;
+    border-radius: 15px;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.apoyo-resumen h3 {
+    margin-bottom: 3rem;
+}
+
+.apoyo-botones {
+    margin-top: 2rem;
+    display: flex; /* Use flexbox for button alignment */
+    flex-wrap: wrap; /* Allow buttons to wrap */
+    justify-content: center; /* Center buttons */
+    gap: 1.5rem; /* Space between buttons */
+}
+
+.apoyo-botones .btn {
+    margin: 1rem; /* Adjust margin for flex layout */
+}
+
+/* --- End of Contacto Styles --- */
