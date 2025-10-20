@@ -32,17 +32,19 @@ header {
   width: 100%;
   padding: 1rem 9%;
   backdrop-filter: blur(10px);
-  filter: drop-shadow(10px);
+  filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.3));
   display: flex;
+  background-color: rgba(46, 125, 50, 0.7);
   justify-content: space-between;
   align-items: center;
   z-index: 100;
 }
 .logo img{
   position: relative;
-  top: 10px;
-  width: 150px;
-  height: 150px;
+  top: 20px;
+  width: 100px;
+  margin: 10px;
+  height: 100px;
 }
 .logo  {
   font-size: 3rem;
@@ -85,7 +87,7 @@ nav a.active {
     border-bottom: 3px solid greenyellow;
     border-bottom-left-radius: 2rem;
     padding: 1rem solid;
-    background-color: greenyellow;
+    background-color: rgba(46, 125, 50, 0.7);    
     border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
   }
 

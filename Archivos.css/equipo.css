@@ -50,6 +50,7 @@ header {
   top: 0; /* CORREGIDO */
   left: 0;
   width: 100%;
+  height: 170px;
   padding: 1rem 9%; /* Aumentado padding vertical */
   backdrop-filter: blur(10px);
   filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.3));
@@ -60,12 +61,13 @@ header {
   background-color: rgba(0, 51, 102, 0.7); /* Fondo Azul Marino semi-transparente */
 }
 
-.logo img {
+.logo img{
   position: relative;
-  /* top: 10px; */ /* Eliminado para mejor alineación vertical */
-  width: 50px; /* Ajustado tamaño */
-  height: 50px;
-  margin-right: 10px; /* Espacio entre imagen y texto */
+  top: 20px;
+  margin: 10px;
+  width: 100px;
+  margin: 10px;
+  height: 100px;
 }
 .logo {
   font-size: 3rem;

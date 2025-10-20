@@ -55,9 +55,12 @@ header {
   z-index: 100;
 }
 
+
 .logo {
   font-size: 3rem;
-  color: #A0522D;
+  /* Color verde de index.css */
+  color: #A0522D; 
+  display: flex;
   font-weight: 800;
   cursor: pointer;
   transition: 0.5s ease;
@@ -66,7 +69,13 @@ header {
 .logo:hover {
   transform: scale(1.1);
 }
-
+.logo img{
+  position: relative;
+  top: 20px;
+  width: 100px;
+  margin: 10px;
+  height: 100px;
+}
 nav a {
   font-size: 1.8rem;
   color: #A0522D;
